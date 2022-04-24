@@ -1,15 +1,15 @@
 let calculator = {
   read: function(a ,b) {
-    calculator.a = +a;
-    calculator.b = +b;
+    this.a = +a;
+    this.b = +b;
   },
 
   sum: function() {
-    return calculator.a + calculator.b;
+    return this.a + this.b;
   },
 
   mul: function() {
-    return calculator.a * calculator.b;
+    return this.a * this.b;
   },
 };
 
