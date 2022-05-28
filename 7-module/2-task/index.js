@@ -32,6 +32,10 @@ export default class Modal {
 
   }
 
+  get elem () {
+    return this.#template;
+  }
+
   #render () {
     this.#template = createElement(this.#template);
   }
