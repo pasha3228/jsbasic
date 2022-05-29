@@ -8,6 +8,7 @@ export default class RibbonMenu {
 
   constructor(categories) {
     this.#categories = categories;
+    this.value = categories[0].id;
 
     this.#render();
     this.#addEventListeners();
@@ -33,6 +34,8 @@ export default class RibbonMenu {
     </div>`;
 
     this.#elem = createElement(template);
+
+    this.#elem.querySelector('.ribbon__inner').firstElementChild.classList.add('ribbon__item_active');
   }
 
   #scrollForward () {
